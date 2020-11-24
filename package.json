@@ -1,0 +1,17 @@
+{
+  "name": "bot-order-n-go",
+  "scripts": {
+		"postinstall": "netlify-lambda install",
+		"buildNetlify": "netlify-lambda build functions",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"devNetlify": "netlify-lambda serve functions"
+  },
+  "engines": {
+    "node": "8"
+  },
+  "main": "functions/index.js",
+  "dependencies": {
+    "netlify-lambda": "^1.6.0",
+    "telegraf": "^3.38.0"
+  }
+}
