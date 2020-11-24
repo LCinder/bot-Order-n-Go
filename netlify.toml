@@ -1,4 +1,0 @@
-[build]
-	publish = "bot"
-	command = "netlify-lambda bot functions"
-	functions = "bot/functions"
