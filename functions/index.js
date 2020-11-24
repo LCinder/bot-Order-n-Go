@@ -17,6 +17,8 @@ bot.help((ctx) => {
 	ctx.reply("	2.- /pedidos <nº pedido> - Indica la información del nº de pedido especificado.\n");
 });
 
+bot.launch();
+
 
 exports.handler = async (event, ctx, callback) => {
 	await bot.handleUpdate(JSON.parse(event.body)):
