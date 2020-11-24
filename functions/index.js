@@ -2,6 +2,8 @@ const Telegraf = require("telegraf");
 
 const bot = new Telegraf(process.env.BOT_KEY);
 
+console.log("aquiiiiiiiiiiiii")
+
 bot.command("mesa", (ctx) => {
 		ctx.reply("Mesa\n\n");
 });
