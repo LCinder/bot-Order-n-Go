@@ -19,9 +19,6 @@ bot.help((ctx) => {
 	ctx.reply("	2.- /pedidos no pedido - Indica la informacion del n de pedido especificado.\n");
 });
 
-bot.launch();
-
-
 exports.handler = async (event, ctx, callback) => {
 	await bot.handleUpdate(JSON.parse(event.body));
 	return callback(null, {statuscode: 200, body: ""});
