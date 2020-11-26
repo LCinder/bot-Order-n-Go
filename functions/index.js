@@ -5,11 +5,11 @@ const bot = new Telegraf(process.env.BOT_KEY);
 console.log("aquiiiiiiiiiiiii")
 
 bot.command("mesa", (ctx) => {
-		ctx.reply("Mesa\n\n");
+		return ctx.reply("Mesa\n\n");
 });
 
 bot.command("pedido", (ctx) => {
-		ctx.reply("Pedido\n\n");
+		return ctx.reply("Pedido\n\n");
 });
 
 
@@ -18,7 +18,6 @@ bot.help((ctx) => {
 	ctx.reply("	1.- /mesa - Indica la mesa con todos los pedidos de la misma.\n");
 	ctx.reply("	2.- /pedidos no pedido - Indica la informacion del n de pedido especificado.\n");
 });
-bot.launch();
 
 
 exports.handler = async (event, ctx, callback) => {
