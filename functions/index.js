@@ -23,6 +23,6 @@ bot.launch();
 
 
 exports.handler = async (event, ctx, callback) => {
-	await bot.handleUpdate(JSON.parse(event.body)):
-	return callback(null, {statuscode: 200});
+	await bot.handleUpdate(JSON.parse(event.body));
+	return callback(null, {statuscode: 200, body: ""});
 };
