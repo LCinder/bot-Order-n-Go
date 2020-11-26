@@ -2,14 +2,17 @@ const Telegraf = require("telegraf");
 
 const bot = new Telegraf(process.env.BOT_KEY);
 
+exports.handler = async function (event) => {
+
 console.log("aquiiiiiiiiiiiii")
+let cad = "f";
 
 bot.command("mesa", (ctx) => {
-		return ctx.reply("Mesa\n\n");
+		cad = ("Mesa\n\n");
 });
 
 bot.command("pedido", (ctx) => {
-		return ctx.reply("Pedido\n\n");
+		cad = ("Pedido\n\n");
 });
 
 
@@ -20,7 +23,5 @@ bot.help((ctx) => {
 });
 
 
-exports.handler = async (event, ctx, callback) => {
-	await bot.handleUpdate(JSON.parse(event.body));
-	return callback(null, {statuscode: 200, body: ""});
+	return {statuscode: 200, body: JSON.stringify(text: cad)};
 };
