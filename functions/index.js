@@ -18,6 +18,8 @@ bot.help((ctx) => {
 	ctx.reply("	1.- /mesa - Indica la mesa con todos los pedidos de la misma.\n");
 	ctx.reply("	2.- /pedidos no pedido - Indica la informacion del n de pedido especificado.\n");
 });
+bot.launch();
+
 
 exports.handler = async (event, ctx, callback) => {
 	await bot.handleUpdate(JSON.parse(event.body));
