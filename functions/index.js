@@ -3,11 +3,11 @@ const Telegraf = require("telegraf");
 const bot = new Telegraf(process.env.BOT_KEY);
 
 bot.command("mesa", (ctx) => {
-		ctx.reply("Mesa\n\n");
+		return ctx.reply("Mesa\n\n");
 });
 
 bot.command("pedido", (ctx) => {
-		ctx.reply("Pedido\n\n");
+		return ctx.reply("Pedido\n\n");
 });
 
 
