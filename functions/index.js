@@ -10,12 +10,8 @@ bot.command("mesa", (ctx) => {
 });
 
 bot.command("pedido", (ctx) => {
-		ctx.reply("Pedido");
-		request(url, (error, response, body) => {
-			if(!error && response.statusCode == 200) {
-				const res = JSON.parse(body);
-				ctx.reply("Pedido: " + res);
-			}
+		getJSON(url, function (error, response) {
+			ctx.reply("Pedido: " + response);
 		});
 });
 

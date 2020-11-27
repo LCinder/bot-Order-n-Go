@@ -3,8 +3,8 @@
   "scripts": {},
   "main": "functions/index.js",
   "dependencies": {
+    "get-json": "^1.0.1",
     "netlify-lambda": "^1.6.0",
-    "request": "^2.88.2",
     "telegraf": "^3.38.0"
   }
 }
