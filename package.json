@@ -1,10 +1,10 @@
 {
   "name": "bot-order-n-go",
-  "scripts": {
-  },
+  "scripts": {},
   "main": "functions/index.js",
   "dependencies": {
     "netlify-lambda": "^1.6.0",
+    "request": "^2.88.2",
     "telegraf": "^3.38.0"
   }
 }
