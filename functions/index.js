@@ -10,12 +10,19 @@ bot.command("mesa", (ctx) => {
 });
 
 bot.command("pedido", (ctx) => {
-		getJSON(url).then(async function(response) {
-			console.log(response);
-			await ctx.reply("Pedido: " + response);
-		}).catch(function(error) {
+	const fetch = require("node-fetch");
+	const getData = async url => {
+		try {
+			const response = await fetch(url);
+			const json = await response.text();
+			ctx.reply(json);
+		} catch (error) {
 			console.log(error);
-		});
+		}
+	};
+
+	getData(url);
+
 });
 
 
