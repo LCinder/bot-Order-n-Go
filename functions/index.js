@@ -1,6 +1,6 @@
 
 const Telegraf = require("telegraf");
-const request = require("request");
+const getJSON = require("get-json");
 const url = "https://order-n-go.vercel.app/api/test";
 
 const bot = new Telegraf(process.env.BOT_KEY);
