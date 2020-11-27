@@ -10,9 +10,9 @@ bot.command("mesa", (ctx) => {
 });
 
 bot.command("pedido", (ctx) => {
-		getJSON(url).then(function(response) {
+		getJSON(url).then(async function(response) {
 			console.log(response);
-			ctx.reply("Pedido: " + response);
+			await ctx.reply("Pedido: " + response);
 		}).catch(function(error) {
 			console.log(error);
 		});
