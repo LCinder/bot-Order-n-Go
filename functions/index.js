@@ -18,7 +18,7 @@ bot.help((ctx) => {
 });
 
 
-exports.handler = async function(event, context, callback) => {
-	bot.handleUpdate(JSON.parse(event.body));
+exports.handler = async (event, context, callback) => {
+	await bot.handleUpdate(JSON.parse(event.body));
 	return callback(null, {statusCode: 200, body: ""});
 };
