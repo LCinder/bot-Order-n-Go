@@ -1,4 +1,7 @@
+
 const Telegraf = require("telegraf");
+const request = require("request");
+const url = "https://order-n-go.vercel.app/api/test";
 
 const bot = new Telegraf(process.env.BOT_KEY);
 
@@ -8,6 +11,11 @@ bot.command("mesa", (ctx) => {
 
 bot.command("pedido", (ctx) => {
 		ctx.reply("Pedido\n\n");
+		request(url, (error, response, body) => {
+			if(!error && response.statusCode == 200) {
+				const res = JSON.parse(body);
+			}
+		});
 });
 
 
