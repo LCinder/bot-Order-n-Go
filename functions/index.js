@@ -26,7 +26,7 @@ bot.command("pedido", (ctx) => {
 
 
 bot.help((ctx) => {
-	ctx.reply("Comandos\n\n"
+	ctx.reply("Comandos: \n"
 	+ "	1.- /mesa - Indica la mesa con todos los pedidos de la misma.\n"
   + "	2.- /pedido no pedido - Indica la informacion de los pedidos de la mesa.\n");
 });
