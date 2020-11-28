@@ -13,7 +13,7 @@ bot.command("pedido", (ctx) => {
 	const getData = async url => {
 		try {
 			const response = await fetch(url);
-			const json = await response.text();
+			const json = response.text();
 			ctx.reply(json);
 		} catch (error) {
 			console.log(error);
