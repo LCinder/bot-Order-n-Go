@@ -1,6 +1,6 @@
 
 const Telegraf = require("telegraf");
-const getJSON = require("get-json");
+const fetch = require("node-fetch");
 const url = "https://order-n-go.vercel.app/api/test";
 
 const bot = new Telegraf(process.env.BOT_KEY);
@@ -10,7 +10,6 @@ bot.command("mesa", (ctx) => {
 });
 
 bot.command("pedido", (ctx) => {
-	const fetch = require("node-fetch");
 	const getData = async url => {
 		try {
 			const response = await fetch(url);
@@ -27,9 +26,9 @@ bot.command("pedido", (ctx) => {
 
 
 bot.help((ctx) => {
-	ctx.reply("Comandos\n\n");
-	ctx.reply("	1.- /mesa - Indica la mesa con todos los pedidos de la misma.\n");
-	ctx.reply("	2.- /pedidos no pedido - Indica la informacion del n de pedido especificado.\n");
+	ctx.reply("Comandos\n\n"
+	+ "	1.- /mesa - Indica la mesa con todos los pedidos de la misma.\n"
+  + "	2.- /pedido no pedido - Indica la informacion de los pedidos de la mesa.\n");
 });
 
 
