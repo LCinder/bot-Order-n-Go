@@ -5,10 +5,6 @@ const url = process.env.URL_TEST;
 
 const bot = new Telegraf(process.env.BOT_KEY);
 
-bot.command("mesa", (ctx) => {
-		ctx.reply("Mesa");
-});
-
 bot.command("pedido", (ctx) => {
 	const getData = async url => {
 		try {
@@ -27,8 +23,7 @@ bot.command("pedido", (ctx) => {
 
 bot.help((ctx) => {
 	ctx.reply("Comandos: \n"
-	+ "	1.- /mesa - Indica la mesa con todos los pedidos de la misma.\n"
-  + "	2.- /pedido no pedido - Indica la informacion de los pedidos de la mesa.\n");
+	+ "	1.- /pedido - Indica la informacion de los pedidos de la mesa.\n");
 });
 
 
